@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:math' as math;
-import 'package:animation_routes_riverpod_divizion/screens/home.dart';
 import 'package:animation_routes_riverpod_divizion/screens/second_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
@@ -65,7 +64,7 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
             to: Duration(seconds: 3),
             tag: 'circle')
         .animate(kontrolejPierwszejAnimacji);
-    kontrolejPierwszejAnimacji.forward().whenComplete(() => Home());
+    kontrolejPierwszejAnimacji.forward();
   }
 
   _loadWidget() async {

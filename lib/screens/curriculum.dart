@@ -7,7 +7,7 @@ class Curriculum extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(color: Colors.blueGrey[200]),
+        decoration: BoxDecoration(color: Colors.blueGrey[300]),
         child: SingleChildScrollView(
           child: Column(
             children: [

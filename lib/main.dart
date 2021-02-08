@@ -1,5 +1,4 @@
 import 'package:animation_routes_riverpod_divizion/screens/intro.dart';
-import 'package:animation_routes_riverpod_divizion/screens/second_page.dart';
 
 import 'package:animation_routes_riverpod_divizion/share/services.dart';
 

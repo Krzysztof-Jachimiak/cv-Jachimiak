@@ -10,46 +10,48 @@ class Details extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.blueGrey[100],
-        appBar: AppBar(
-          backgroundColor: Colors.deepOrange,
-          elevation: 0,
-          iconTheme: IconThemeData(color: Colors.white),
-        ),
-        body: SingleChildScrollView(
-          child: Stack(children: [
-            Container(
-              color: Colors.deepOrange,
-              height: 280,
-              alignment: Alignment.topCenter,
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                Hero(
-                    tag: rozdzial.img,
-                    child: Image.asset(
-                      rozdzial.img,
-                      height: 220,
-                      fit: BoxFit.fitHeight,
-                      alignment: Alignment.topCenter,
-                    )),
-                ListTile(
-                    title: Text(rozdzial.title,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20,
-                            color: Colors.grey[800])),
-                    trailing: Serce()),
-                Container(
-                  child: Padding(
-                      padding: EdgeInsets.all(18), child: (rozdzial.details)),
-                ),
-              ],
-            ),
-          ]),
-        ));
+    return SafeArea(
+      child: Scaffold(
+          backgroundColor: Colors.blueGrey[300],
+          appBar: AppBar(
+            backgroundColor: Colors.deepOrange,
+            elevation: 0,
+            iconTheme: IconThemeData(color: Colors.white),
+          ),
+          body: SingleChildScrollView(
+            child: Stack(children: [
+              Container(
+                color: Colors.deepOrange,
+                height: 280,
+                alignment: Alignment.topCenter,
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Hero(
+                      tag: rozdzial.img,
+                      child: Image.asset(
+                        rozdzial.img,
+                        height: 220,
+                        fit: BoxFit.fitHeight,
+                        alignment: Alignment.topCenter,
+                      )),
+                  ListTile(
+                      title: Text(rozdzial.title,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 20,
+                              color: Colors.grey[800])),
+                      trailing: Serce()),
+                  Container(
+                    child: Padding(
+                        padding: EdgeInsets.all(18), child: (rozdzial.details)),
+                  ),
+                ],
+              ),
+            ]),
+          )),
+    );
   }
 }

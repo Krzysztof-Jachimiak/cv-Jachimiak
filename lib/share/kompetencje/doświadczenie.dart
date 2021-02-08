@@ -40,12 +40,13 @@ Sty 2016 – Kwi 2020
 
   • Kancelaria finansowa współpracująca z 
     wieloma bankami
-  • Obsługująca małe i średnie przedsiębiorstwa 
-  • Specjalizująca się w pozyskiwaniu środków 
+  • Negocjacje warunków z bankami.
+  • Obsługująca małe i średnie przedsiębiorstwa.
+  • Specjalizująca się w pozyskiwaniu środków. 
     finansowych - iwestycyjnych i obrotowych.
   • Analiza dokumentów finansowych firmy,
-    badaniezdolności kredytowych, analiza pod 
-    kątem scoringowymfirmy oraz właścicieli
+    badanie zdolności kredytowych, analiza pod 
+    kątem scoringowym firmy oraz właścicieli.
     ''', style: styleproza),
             TextSpan(text: '''
 
@@ -54,9 +55,9 @@ Sty 2014 – Sty 2016
 ''', style: stylenagluwek),
             TextSpan(text: '''
 
-  •Koordynowanie pracy oddziału
-  •Dbanie o realizacje planów sprzedażowych
-  •Kompleksowe zarządzanie oddziałem
+  •Koordynowanie pracy oddziału.
+  •Dbanie o realizacje planów sprzedażowych.
+  •Kompleksowe zarządzanie oddziałem.
   
   ''', style: styleproza),
             TextSpan(
@@ -74,8 +75,7 @@ Wrz 2012 – Sty 2014''',
 • Pozyskiwanie finansowania dla mikro 
   przedsiębiorców.
 • Budowanie dobrego wizerunku firmy.
-• Analiza konkurencji - Analizy działalności 
-  konkurencji
+• Optymalizacja podatkowa
   ''', style: styleproza),
             TextSpan(text: '''
 

@@ -31,7 +31,7 @@ class _ZainteresowaniaState extends State<Zainteresowania>
 
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.blueGrey[100],
+      color: Colors.blueGrey[300],
       child: Row(
         children: [
           Column(

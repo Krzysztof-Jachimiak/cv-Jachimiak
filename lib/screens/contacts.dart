@@ -31,7 +31,7 @@ class _ContactsState extends State<Contacts> {
             alignment: Alignment.centerLeft,
             child: Container(
               height: 700,
-              color: Colors.grey[800],
+              color: Colors.blueGrey[300],
               child: Stack(
                 children: [
                   Padding(
@@ -164,21 +164,11 @@ class _ContactsState extends State<Contacts> {
                                       ),
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(20.0),
-                                    child: Text(
-                                      'Naciśnij zatwierdź by zadzwonić',
-                                      style: TextStyle(
-                                          color: Colors.white70,
-                                          wordSpacing: 2),
-                                      textScaleFactor: 1.4,
-                                    ),
-                                  ),
                                   Container(
                                     width: 200,
                                     height: 50,
                                     decoration: BoxDecoration(
-                                        color: Colors.white,
+                                        color: Colors.deepOrange,
                                         borderRadius:
                                             BorderRadius.circular(10)),
                                     child: MaterialButton(
@@ -190,7 +180,7 @@ class _ContactsState extends State<Contacts> {
                                           'Zatwierdź',
                                           style: TextStyle(
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xffdd46b51),
+                                              color: Colors.blueGrey[200],
                                               wordSpacing: 2),
                                           textScaleFactor: 1.4,
                                         ),

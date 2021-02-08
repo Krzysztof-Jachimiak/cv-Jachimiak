@@ -11,12 +11,13 @@ class Wyksztalcenie extends StatelessWidget {
             text:
                 '''Szkoła to nie wszystko, wiedzę można zdobyć w bardziej efektywny sposób. Lubie się uczyć.
               
-              
-              ''',
+         
+        ''',
             style: stylenagluwek,
             children: [
               TextSpan(
-                text: '''Wyższa Szkoła Ekonomiczno Informatyczna w Warszawie
+                text:
+                    '''Wyższa Szkoła Ekonomiczno Informatyczna w Warszawie - Licencjat z ekonomi. 
               ''',
                 style: stylenagluwek,
               ),
@@ -31,7 +32,7 @@ class Wyksztalcenie extends StatelessWidget {
               TextSpan(
                 text: '''
  
-IV Liceum Ogulnokształcące w Bielsku Podlaskim
+       IV Liceum Ogulnokształcące w Bielsku Podlaskim
               ''',
                 style: stylenagluwek,
               ),
