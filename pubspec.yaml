@@ -35,8 +35,6 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_sequence_animation: "^3.0.0"
-  flutter_hooks:
-  hooks_riverpod:
   get:
   lipsum: ^1.0.1
   url_launcher: ^5.0.3

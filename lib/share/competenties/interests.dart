@@ -1,12 +1,12 @@
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 
-class Zainteresowania extends StatefulWidget {
+class Interests extends StatefulWidget {
   @override
-  _ZainteresowaniaState createState() => _ZainteresowaniaState();
+  _InterestsState createState() => _InterestsState();
 }
 
-class _ZainteresowaniaState extends State<Zainteresowania>
+class _InterestsState extends State<Interests>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<EdgeInsets> _padding;

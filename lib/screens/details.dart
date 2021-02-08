@@ -1,11 +1,11 @@
-import 'package:animation_routes_riverpod_divizion/model/budowa_rozdzialu.dart';
+import 'package:animation_routes_riverpod_divizion/model/the_chapter.dart';
 
-import 'package:animation_routes_riverpod_divizion/share/serce.dart';
+import 'package:animation_routes_riverpod_divizion/share/heart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class Details extends StatelessWidget {
-  final BudowaRozdzoalu rozdzial;
+  final TheChapter rozdzial;
   Details({@required this.rozdzial});
 
   @override
@@ -43,7 +43,7 @@ class Details extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                               color: Colors.grey[800])),
-                      trailing: Serce()),
+                      trailing: Heart()),
                   Container(
                     child: Padding(
                         padding: EdgeInsets.all(18), child: (rozdzial.details)),

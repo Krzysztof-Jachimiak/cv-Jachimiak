@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Serce extends StatefulWidget {
+class Heart extends StatefulWidget {
   @override
-  _SerceState createState() => _SerceState();
+  _HeartState createState() => _HeartState();
 }
 
-class _SerceState extends State<Serce> {
+class _HeartState extends State<Heart> {
   @override
   Widget build(BuildContext context) {
     return IconButton(

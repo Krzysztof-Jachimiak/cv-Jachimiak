@@ -2,7 +2,7 @@ import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Doswiadczenie extends StatelessWidget {
+class Experience extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -11,13 +11,13 @@ class Doswiadczenie extends StatelessWidget {
           text: '''JDG S.L. Krzysztof Jachimiak, - Właściciel 
 Kwi 2020 – obecnie
               ''',
-          style: stylenagluwek,
+          style: styleheading,
           children: [
             TextSpan(
               text: '''
 
   • W trakcie intensywnej nauki ''',
-              style: styleproza,
+              style: styleprose,
             ),
             WidgetSpan(
                 child: Image.asset(
@@ -34,7 +34,7 @@ Kwi 2020 – obecnie
 JDG S.L. Krzysztof Jachimiak,  - Właściciel 
 Sty 2016 – Kwi 2020
               ''',
-              style: stylenagluwek,
+              style: styleheading,
             ),
             TextSpan(text: '''
 
@@ -47,25 +47,25 @@ Sty 2016 – Kwi 2020
   • Analiza dokumentów finansowych firmy,
     badanie zdolności kredytowych, analiza pod 
     kątem scoringowym firmy oraz właścicieli.
-    ''', style: styleproza),
+    ''', style: styleprose),
             TextSpan(text: '''
 
 Tax Care S.A. – Dyrektor Oddziału 
 Sty 2014 – Sty 2016
-''', style: stylenagluwek),
+''', style: styleheading),
             TextSpan(text: '''
 
   •Koordynowanie pracy oddziału.
   •Dbanie o realizacje planów sprzedażowych.
   •Kompleksowe zarządzanie oddziałem.
   
-  ''', style: styleproza),
+  ''', style: styleprose),
             TextSpan(
               text: '''
 
 Tax Care S.A. - Starszy Doradca Biznesowy
 Wrz 2012 – Sty 2014''',
-              style: stylenagluwek,
+              style: styleheading,
             ),
             TextSpan(text: '''
 
@@ -76,16 +76,16 @@ Wrz 2012 – Sty 2014''',
   przedsiębiorców.
 • Budowanie dobrego wizerunku firmy.
 • Optymalizacja podatkowa
-  ''', style: styleproza),
+  ''', style: styleprose),
             TextSpan(text: '''
 
 Polkomtel S.A. - Starszy Specjalista 
 Sty 2003 – Sty 2011
-''', style: stylenagluwek),
+''', style: styleheading),
             TextSpan(text: '''
 
 Polkomtel S.A. - Starszy Specjalista 
-Sty 1998 – Sty 2003''', style: stylenagluwek),
+Sty 1998 – Sty 2003''', style: styleheading),
           ]),
     );
   }

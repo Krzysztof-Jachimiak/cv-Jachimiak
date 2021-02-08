@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BudowaRozdzoalu {
+class TheChapter {
   final String title;
 
   final String img;
   final Widget details;
 
-  BudowaRozdzoalu({this.title, this.img, this.details});
+  TheChapter({this.title, this.img, this.details});
 }

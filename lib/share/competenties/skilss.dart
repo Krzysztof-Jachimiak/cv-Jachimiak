@@ -2,7 +2,7 @@ import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class Umiejetnosci extends StatelessWidget {
+class Skills extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
@@ -10,7 +10,7 @@ class Umiejetnosci extends StatelessWidget {
       text: TextSpan(
           text: '''Umiejętności powiązane z programowaniem
               ''',
-          style: stylenagluwek,
+          style: styleheading,
           children: [
             WidgetSpan(
                 child: Image.asset(
@@ -44,14 +44,14 @@ class Umiejetnosci extends StatelessWidget {
 
 
   ''',
-              style: styleproza,
+              style: styleprose,
             ),
             TextSpan(
               text: '''
 
 Umiejętności z poprzedniego życia:)
               ''',
-              style: stylenagluwek,
+              style: styleheading,
             ),
             TextSpan(text: '''
 
@@ -71,7 +71,7 @@ Umiejętności z poprzedniego życia:)
 • Myślenie analityczne.
 • Obsługa potencjalnych klientów.
 • Biegła znajomość pakietu Office hahaha :)
-      ''', style: styleproza),
+      ''', style: styleprose),
           ]),
     );
   }
