@@ -4,6 +4,7 @@ import 'package:animation_routes_riverpod_divizion/screens/home.dart';
 import 'package:animation_routes_riverpod_divizion/screens/second_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PierwszaAnimacja extends StatefulWidget {
   @override
@@ -30,7 +31,7 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
             tag: 'color1')
         .addAnimatable(
             animatable:
-                ColorTween(begin: Colors.transparent, end: Colors.purple),
+                ColorTween(begin: Colors.transparent, end: Colors.white),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
             tag: 'color')
@@ -46,13 +47,13 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
             to: Duration(seconds: 3),
             tag: 'width')
         .addAnimatable(
-            animatable: Tween<double>(begin: 120, end: 290),
+            animatable: Tween<double>(begin: 150, end: 330),
             curve: (Curves.elasticOut),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
             tag: 'padding')
         .addAnimatable(
-            animatable: Tween<double>(begin: 100, end: 95),
+            animatable: Tween<double>(begin: 135, end: 135),
             curve: (Curves.elasticOut),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
@@ -88,12 +89,15 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 120,
+                    vertical: 100,
                     horizontal: 110,
                   ),
                   child: CircleAvatar(
+                    backgroundColor: Colors.lightBlue[200],
+                    backgroundImage: AssetImage(
+                      'assets/ja.png',
+                    ),
                     radius: 100,
-                    backgroundImage: AssetImage('assets/daria.jpg'),
                   ),
                 ),
                 Container(
@@ -103,22 +107,16 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
                   padding: EdgeInsets.symmetric(
                       horizontal: sequenceAnimation['padding1'].value,
                       vertical: sequenceAnimation['padding'].value),
-                  child: AnimationPage(),
+                  child: AnimacjaCv(),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(180, 350, 0, 0),
-                  child: Text('aria',
-                      style: TextStyle(
-                          color: sequenceAnimation['color'].value,
-                          fontSize: 50)),
-                ),
-                Align(
-                  alignment: Alignment.centerLeft,
+                  padding: EdgeInsets.fromLTRB(10, 420, 0, 0),
                   child: Container(
-                    height: 50,
-                    color: sequenceAnimation['color1'].value,
-                    // width: sequenceAnimation['width'].value,
-                    alignment: Alignment.center,
+                    child: Text(' Krzysztof Jachimiak',
+                        style: GoogleFonts.lato(
+                            color: sequenceAnimation['color'].value,
+                            fontSize: 40,
+                            fontWeight: FontWeight.w300)),
                   ),
                 ),
               ],
@@ -134,12 +132,12 @@ class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
   }
 }
 
-class AnimationPage extends StatefulWidget {
+class AnimacjaCv extends StatefulWidget {
   @override
-  _AnimationPageState createState() => _AnimationPageState();
+  _AnimacjaCvState createState() => _AnimacjaCvState();
 }
 
-class _AnimationPageState extends State<AnimationPage>
+class _AnimacjaCvState extends State<AnimacjaCv>
     with SingleTickerProviderStateMixin {
   AnimationController animController;
   Animation<double> animation;
@@ -160,18 +158,7 @@ class _AnimationPageState extends State<AnimationPage>
     animation = Tween<double>(
       begin: 0,
       end: 2 * math.pi,
-    ).animate(curvedAnimation)
-      ..addListener(() {
-        setState(() {});
-      })
-      ..addStatusListener((status) {
-        // if (status == AnimationStatus.completed) {
-        //   animController.reverse();
-        // } else if (status == AnimationStatus.dismissed) {
-        animController.forward();
-        // }
-      });
-
+    ).animate(curvedAnimation);
     animController.forward();
   }
 
@@ -179,14 +166,19 @@ class _AnimationPageState extends State<AnimationPage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: Transform.rotate(
-        angle: animation.value,
+      body: AnimatedBuilder(
+        animation: animController,
+        builder: (context, child) {
+          return Transform.rotate(
+            angle: animation.value,
+            child: child,
+          );
+        },
         child: Container(
-          color: Colors.transparent,
-          padding: EdgeInsets.fromLTRB(50, 50, 0, 0),
+          padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
           child: Text(
-            'D',
-            style: TextStyle(fontSize: 60, color: Colors.pink),
+            'C.V',
+            style: TextStyle(fontSize: 60, color: Colors.grey[300]),
           ),
         ),
       ),
