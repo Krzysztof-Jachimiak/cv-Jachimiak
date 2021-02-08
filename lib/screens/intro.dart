@@ -5,13 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PierwszaAnimacja extends StatefulWidget {
+class Intro extends StatefulWidget {
   @override
-  _PierwszaAnimacjaState createState() => _PierwszaAnimacjaState();
+  _IntroState createState() => _IntroState();
 }
 
-class _PierwszaAnimacjaState extends State<PierwszaAnimacja>
-    with SingleTickerProviderStateMixin {
+class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
   AnimationController kontrolejPierwszejAnimacji;
   SequenceAnimation sequenceAnimation;
 
