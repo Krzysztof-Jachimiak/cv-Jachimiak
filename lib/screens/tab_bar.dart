@@ -3,12 +3,8 @@ import 'package:flutter/material.dart';
 import 'why.dart';
 import 'contacts.dart';
 
-class Second extends StatefulWidget {
+class TabScreens extends StatelessWidget {
   @override
-  _SecondState createState() => _SecondState();
-}
-
-class _SecondState extends State<Second> {
   List<Widget> pages = [
     Curriculum(),
     Why(),

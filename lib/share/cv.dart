@@ -58,7 +58,7 @@ class _CvState extends State<Cv> {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => Details(rozdzial: rozdzial)));
+                  builder: (context) => Details(chapter: rozdzial)));
         },
         contentPadding: EdgeInsets.all(10),
         title: Column(

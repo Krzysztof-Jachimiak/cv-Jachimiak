@@ -1,12 +1,13 @@
 import 'package:animation_routes_riverpod_divizion/model/the_chapter.dart';
 
 import 'package:animation_routes_riverpod_divizion/share/heart.dart';
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 class Details extends StatelessWidget {
-  final TheChapter rozdzial;
-  Details({@required this.rozdzial});
+  final TheChapter chapter;
+  Details({@required this.chapter});
 
   @override
   Widget build(BuildContext context) {
@@ -30,23 +31,19 @@ class Details extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   Hero(
-                      tag: rozdzial.img,
+                      tag: chapter.img,
                       child: Image.asset(
-                        rozdzial.img,
+                        chapter.img,
                         height: 220,
                         fit: BoxFit.fitHeight,
                         alignment: Alignment.topCenter,
                       )),
                   ListTile(
-                      title: Text(rozdzial.title,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20,
-                              color: Colors.grey[800])),
+                      title: Text(chapter.title, style: styleHeadWhite),
                       trailing: Heart()),
                   Container(
                     child: Padding(
-                        padding: EdgeInsets.all(18), child: (rozdzial.details)),
+                        padding: EdgeInsets.all(18), child: (chapter.details)),
                   ),
                 ],
               ),

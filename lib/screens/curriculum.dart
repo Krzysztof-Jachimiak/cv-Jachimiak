@@ -1,4 +1,5 @@
 import 'package:animation_routes_riverpod_divizion/share/cv.dart';
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,18 +11,10 @@ class Curriculum extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.blueGrey[300]),
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Padding(
-                padding: const EdgeInsets.all(30.0),
-                child: Text(
-                  'Curriculum Vitae                  Krzysztof Jachimiak',
-                  style: GoogleFonts.lato(
-                      color: Colors.black,
-                      fontSize: 25,
-                      fontWeight: FontWeight.w300),
-                  textAlign: TextAlign.center,
-                ),
-              ),
+              Text('Curriculum Vitae', style: styleHeadBlack),
+              Text('Krzysztof Jachimiak', style: styleHeadBlack),
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Container(

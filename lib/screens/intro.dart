@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:math' as math;
-import 'package:animation_routes_riverpod_divizion/screens/second_page.dart';
+import 'package:animation_routes_riverpod_divizion/screens/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -73,7 +73,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
 
   void navigationPage() {
     Navigator.pushReplacement(context,
-        MaterialPageRoute(builder: (BuildContext context) => Second()));
+        MaterialPageRoute(builder: (BuildContext context) => TabScreens()));
   }
 
   @override

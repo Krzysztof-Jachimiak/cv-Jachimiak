@@ -1,41 +1,40 @@
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
+import 'package:animation_routes_riverpod_divizion/strings/competenties.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 
 class Education extends StatelessWidget {
+  final _string = StringCEduController.the;
   @override
   Widget build(BuildContext context) {
-    return RichText(
-        textAlign: TextAlign.justify,
-        text: TextSpan(
-            text:
-                '''Szkoła to nie wszystko, wiedzę można zdobyć w bardziej efektywny sposób. Lubie się uczyć.
-              
-         
-        ''',
+    return Obx(() =>
+        Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          Text(
+            _string.e1.toString(),
             style: styleheading,
-            children: [
-              TextSpan(
-                text:
-                    '''Wyższa Szkoła Ekonomiczno Informatyczna w Warszawie - Licencjat z ekonomi. 
-              ''',
-                style: styleheading,
-              ),
-              TextSpan(
-                text: '''
-
-  • Finanse i Ekonomia podstawy programowania ale to było bardzo dawno
-  
-   ''',
-                style: styleprose,
-              ),
-              TextSpan(
-                text: '''
- 
-       IV Liceum Ogulnokształcące w Bielsku Podlaskim
-              ''',
-                style: styleheading,
-              ),
-            ]));
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Text(
+            _string.e2.toString(),
+            style: styleheading,
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Text(
+            _string.e3.toString(),
+            style: styleprose,
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          Text(
+            _string.e4.toString(),
+            style: styleheading,
+          ),
+        ]));
   }
 }
