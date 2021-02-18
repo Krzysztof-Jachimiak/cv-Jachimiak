@@ -1,78 +1,37 @@
+import 'package:animation_routes_riverpod_divizion/controllers/strings_controllers.dart';
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 
 class Skills extends StatelessWidget {
+  final _string = StringCEduController.the;
   @override
   Widget build(BuildContext context) {
-    return RichText(
-      textAlign: TextAlign.justify,
-      text: TextSpan(
-          text: '''Umiejętności powiązane z programowaniem
-              ''',
-          style: styleheading,
+    return Obx(() => Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            WidgetSpan(
-                child: Image.asset(
-                  'assets/flutter.png',
-                  filterQuality: FilterQuality.high,
-                  colorBlendMode: BlendMode.darken,
-                  color: Colors.blueGrey[100],
-                  height: 60,
-                ),
-                alignment: PlaceholderAlignment.middle),
-            TextSpan(
-              text: '''
-• Flutter/Dart 
-• To co widać w tym CV to wszystko mój kod, 
-    rozumiem każdą linijkę. Dodatkowo radzę 
-    sobie z przetwarzaniem zapytań REST z 
-    dowolneto API. Mam podstawy obsługi 
-    Firebase oraz Bloc Cubit.Kompletnie 
-    rozumiem wszystkie zasady działania 
-    Routingu. Zaczynam ekscytować się 
-    animacjami:). Najbardziej komfortowo 
-    czujesię na forntendzie. Jestem kreatywny 
-    i czuję od zawsze potrzebę tworzenia.
-• Git i tym samym GitLab/GitHub.
-• Adobe PhotoShop.
-• Adobe Illustrator.
-• SolidWorks (czasami się przydaje od grafiki 3d).
-• Visual Studio.
-• Android Stutio.
-
-
-
-  ''',
-              style: styleprose,
+            RichText(
+              textAlign: TextAlign.justify,
+              text: TextSpan(
+                  text: _string.s1.toString(),
+                  style: styleheading,
+                  children: [
+                    WidgetSpan(
+                        child: Image.asset(
+                          'assets/flutter.png',
+                          filterQuality: FilterQuality.high,
+                          colorBlendMode: BlendMode.darken,
+                          color: Colors.blueGrey[300],
+                          height: 60,
+                        ),
+                        alignment: PlaceholderAlignment.middle),
+                    TextSpan(text: _string.s2.toString(), style: styleprose),
+                  ]),
             ),
-            TextSpan(
-              text: '''
-
-Umiejętności z poprzedniego życia:)
-              ''',
-              style: styleheading,
-            ),
-            TextSpan(text: '''
-
-• Udokumentowane doświadczenie w sprzedaży.
-• Bardzo wysoka zdolność negocjacyjna. 
-• Umiejętność skutecznej komunikacji.
-• Analiza Finansowa.
-• Tworzenie ofert.
-• Umiejętność skutecznego finalizowania 
-  transakcji ale wypadłem z obiegu :).
-• Analiza trendów rynkowych.
-• Sprzedaż bazująca na relacjach.
-• Wysoki poziom zorganizowania.
-• Analiza rynku.
-• Pozyskiwanie nowych klientów.
-• Planowanie strategiczne. 
-• Myślenie analityczne.
-• Obsługa potencjalnych klientów.
-• Biegła znajomość pakietu Office hahaha :)
-      ''', style: styleprose),
-          ]),
-    );
+            Text(_string.s3.toString(), style: styleheading),
+            Text(_string.s4.toString(), style: styleprose),
+          ],
+        ));
   }
 }

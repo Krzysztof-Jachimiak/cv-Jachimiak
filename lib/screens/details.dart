@@ -1,5 +1,4 @@
 import 'package:animation_routes_riverpod_divizion/model/the_chapter.dart';
-
 import 'package:animation_routes_riverpod_divizion/share/heart.dart';
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +34,7 @@ class Details extends StatelessWidget {
                       child: Image.asset(
                         chapter.img,
                         height: 220,
-                        fit: BoxFit.fitHeight,
+                        scale: 0.01,
                         alignment: Alignment.topCenter,
                       )),
                   ListTile(

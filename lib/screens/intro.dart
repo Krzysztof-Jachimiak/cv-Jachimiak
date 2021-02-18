@@ -11,7 +11,7 @@ class Intro extends StatefulWidget {
 }
 
 class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
-  AnimationController kontrolejPierwszejAnimacji;
+  AnimationController firstAnimController;
   SequenceAnimation sequenceAnimation;
 
   @override
@@ -19,7 +19,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
     super.initState();
     _loadWidget();
 
-    kontrolejPierwszejAnimacji = AnimationController(vsync: this);
+    firstAnimController = AnimationController(vsync: this);
     sequenceAnimation = SequenceAnimationBuilder()
         .addAnimatable(
             animatable:
@@ -62,8 +62,8 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
             tag: 'circle')
-        .animate(kontrolejPierwszejAnimacji);
-    kontrolejPierwszejAnimacji.forward();
+        .animate(firstAnimController);
+    firstAnimController.forward();
   }
 
   _loadWidget() async {
@@ -81,7 +81,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
     return Scaffold(
       backgroundColor: Colors.black,
       body: AnimatedBuilder(
-          animation: kontrolejPierwszejAnimacji,
+          animation: firstAnimController,
           builder: (BuildContext context, Widget child) {
             return Stack(
               children: [
@@ -125,7 +125,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
 
   @override
   void dispose() {
-    kontrolejPierwszejAnimacji.dispose();
+    firstAnimController.dispose();
     super.dispose();
   }
 }

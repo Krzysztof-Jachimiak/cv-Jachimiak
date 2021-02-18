@@ -1,7 +1,6 @@
 import 'package:animation_routes_riverpod_divizion/share/cv.dart';
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Curriculum extends StatelessWidget {
   @override
@@ -9,28 +8,40 @@ class Curriculum extends StatelessWidget {
     return SafeArea(
       child: Container(
         decoration: BoxDecoration(color: Colors.blueGrey[300]),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Curriculum Vitae', style: styleHeadBlack),
-              Text('Krzysztof Jachimiak', style: styleHeadBlack),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Container(
-                  height: 205,
-                  child: Image.asset(
-                    'assets/ja.png',
-                    colorBlendMode: BlendMode.colorDodge,
-                  ),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 24),
+                  child: Text('Curriculum Vitae', style: styleHeadBlack),
+                ),
+                Text('Krzysztof Jachimiak', style: styleHeadBlack),
+              ],
+            ),
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 60, 16, 0),
+              child: Container(
+                width: MediaQuery.of(context).size.width * 1,
+                child: Image.asset(
+                  'assets/ja.png',
+                  colorBlendMode: BlendMode.colorDodge,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(15),
-                child: Container(width: 400, height: 300, child: Cv()),
-              ),
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 340, 16, 0),
+              child: Container(height: 500, child: Cv()),
+            ),
+
+            // Padding(
+            //   padding: const EdgeInsets.symmetric(horizontal: 16),
+            //   child: Container(width: 400, height: 300, child: Cv()),
+            // ),
+          ],
         ),
       ),
     );

@@ -4,9 +4,11 @@ import 'package:animation_routes_riverpod_divizion/share/competenties/education.
 import 'package:animation_routes_riverpod_divizion/share/competenties/experience.dart';
 import 'package:animation_routes_riverpod_divizion/share/competenties/interests.dart';
 import 'package:animation_routes_riverpod_divizion/share/competenties/skilss.dart';
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:get/get.dart';
 
 class Cv extends StatefulWidget {
   @override
@@ -55,20 +57,16 @@ class _CvState extends State<Cv> {
       color: Colors.deepOrange,
       child: ListTile(
         onTap: () {
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => Details(chapter: rozdzial)));
+          Get.to(Details(chapter: rozdzial));
         },
         contentPadding: EdgeInsets.all(10),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(rozdzial.title,
-                style: GoogleFonts.lato(
-                    fontSize: 28,
-                    fontWeight: FontWeight.w800,
-                    color: Colors.white)),
+            Text(
+              rozdzial.title,
+              style: styleHeadWhite,
+            ),
           ],
         ),
         leading: ClipRRect(

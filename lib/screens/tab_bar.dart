@@ -1,13 +1,13 @@
 import 'package:animation_routes_riverpod_divizion/screens/curriculum.dart';
 import 'package:flutter/material.dart';
-import 'why.dart';
+import 'rest_api_example.dart';
 import 'contacts.dart';
 
 class TabScreens extends StatelessWidget {
   @override
-  List<Widget> pages = [
+  static List<Widget> pages = [
     Curriculum(),
-    Why(),
+    ProductPage(),
     Contacts(),
   ];
   @override
@@ -16,7 +16,7 @@ class TabScreens extends StatelessWidget {
         length: 3,
         initialIndex: 0,
         child: Scaffold(
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.blueGrey[300],
           body: TabBarView(
             children: pages,
           ),
@@ -36,7 +36,7 @@ class TabScreens extends StatelessWidget {
                   Icons.contact_phone_outlined,
                 )),
               ],
-              unselectedLabelColor: Colors.purple,
+              unselectedLabelColor: Colors.deepOrange,
             ),
           ),
         ));

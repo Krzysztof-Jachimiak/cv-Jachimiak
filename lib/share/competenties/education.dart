@@ -1,5 +1,6 @@
+import 'package:animation_routes_riverpod_divizion/controllers/strings_controllers.dart';
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
-import 'package:animation_routes_riverpod_divizion/strings/competenties.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:get/get.dart';

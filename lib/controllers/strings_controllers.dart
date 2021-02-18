@@ -67,5 +67,54 @@ class StringCEduController extends GetxController {
   '''
       .obs;
 
+  final s1 = '''Umiejętności powiązane z programowaniem
+              '''
+      .obs;
+  final s2 = '''Flutter/Dart 
+• To co widać w tym CV to wszystko mój kod, 
+  Wykożystałem w nim Getx, Dio, Pokazałem że 
+  rozumiem na czym polega animacja,
+  Do stworzenia połączenia  tel, wykożystałme 
+  Url_launcher i get_it. 
+  W symulacji sklepu, pokazałem że rozumiem 
+  Rest API które za pomocą pakitetów GetX oraz
+  Dio, przetworzyłem na listę  a dokładnie Grid
+  z produktami. 
+• Git i tym samym GitLab/GitHub.
+• Adobe PhotoShop.
+• Adobe Illustrator.
+• SolidWorks (czasami się przydaje od grafiki 3d).
+• Visual Studio.
+• Android Stutio.
+
+  '''
+      .obs;
+  final s3 = '''
+Umiejętności z poprzedniego życia:)
+'''
+      .obs;
+  final s4 = '''
+
+• Udokumentowane doświadczenie w sprzedaży.
+• Bardzo wysoka zdolność negocjacyjna. 
+• Umiejętność skutecznej komunikacji.
+• Analiza Finansowa.
+• Tworzenie ofert.
+• Umiejętność skutecznego finalizowania 
+  transakcji ale wypadłem z obiegu :).
+• Analiza trendów rynkowych.
+• Sprzedaż bazująca na relacjach.
+• Wysoki poziom zorganizowania.
+• Analiza rynku.
+• Pozyskiwanie nowych klientów.
+• Planowanie strategiczne. 
+• Myślenie analityczne.
+• Obsługa potencjalnych klientów.
+          '''
+      .obs;
+  final tel = '693692696'.obs;
+  final ul = 'Toruń ul Targowa 26'.obs;
+  final email = 'k.jachimiak.net@gmail.com'.obs;
+
   static StringCEduController get the => Get.find<StringCEduController>();
 }
