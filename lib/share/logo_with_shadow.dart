@@ -4,8 +4,8 @@ import 'dart:ui';
 class Logo extends StatelessWidget {
   final colorBlendMode;
   final color;
-  double width;
-  double height;
+  final double width;
+  final double height;
   Logo({this.color, this.width, this.height, this.colorBlendMode});
 
   @override

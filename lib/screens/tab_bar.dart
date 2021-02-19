@@ -4,7 +4,6 @@ import 'rest_api_example.dart';
 import 'contacts.dart';
 
 class TabScreens extends StatelessWidget {
-  @override
   static List<Widget> pages = [
     Curriculum(),
     ProductPage(),
@@ -16,7 +15,7 @@ class TabScreens extends StatelessWidget {
         length: 3,
         initialIndex: 0,
         child: Scaffold(
-          backgroundColor: Colors.blueGrey[300],
+          backgroundColor: Colors.deepOrange,
           body: TabBarView(
             children: pages,
           ),
@@ -36,7 +35,7 @@ class TabScreens extends StatelessWidget {
                   Icons.contact_phone_outlined,
                 )),
               ],
-              unselectedLabelColor: Colors.deepOrange,
+              unselectedLabelColor: Colors.black,
             ),
           ),
         ));

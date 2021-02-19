@@ -8,7 +8,7 @@ class VerticalKJ extends StatelessWidget {
       width: MediaQuery.of(context).size.width * 0.2,
       decoration: BoxDecoration(
           color: Colors.deepOrange,
-          borderRadius: BorderRadius.only(bottomRight: Radius.circular(72))),
+          borderRadius: BorderRadius.only(bottomRight: Radius.circular(48))),
       child: RotatedBox(
         quarterTurns: 3,
         child: Align(

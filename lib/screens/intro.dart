@@ -93,7 +93,7 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
                   child: CircleAvatar(
                     backgroundColor: Colors.lightBlue[200],
                     backgroundImage: AssetImage(
-                      'assets/ja.png',
+                      'assets/profilePicture.png',
                     ),
                     radius: 100,
                   ),

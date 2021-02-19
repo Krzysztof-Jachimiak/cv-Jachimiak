@@ -7,7 +7,6 @@ import 'package:animation_routes_riverpod_divizion/share/competenties/skilss.dar
 import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 
 class Cv extends StatefulWidget {
@@ -30,18 +29,18 @@ class _CvState extends State<Cv> {
     List<TheChapter> _rozdzialy = [
       TheChapter(
         title: 'Doświadczenie',
-        img: 'assets/doswiadczenie.png',
+        img: 'assets/experience.png',
         details: Experience(),
       ),
       TheChapter(
           title: 'Umiejętności', img: 'assets/skils.png', details: Skills()),
       TheChapter(
           title: 'Wykształcenie',
-          img: 'assets/edukacja.png',
+          img: 'assets/education.png',
           details: Education()),
       TheChapter(
           title: 'Zainteresowania',
-          img: 'assets/plany.png',
+          img: 'assets/interests.png',
           details: Interests()),
     ];
 
@@ -53,7 +52,7 @@ class _CvState extends State<Cv> {
   Widget _buildTile(TheChapter rozdzial) {
     return Card(
       borderOnForeground: false,
-      elevation: 5,
+      elevation: 2,
       color: Colors.deepOrange,
       child: ListTile(
         onTap: () {

@@ -67,25 +67,28 @@ class StringCEduController extends GetxController {
   '''
       .obs;
 
-  final s1 = '''Umiejętności powiązane z programowaniem
+  final s1 = '''Umiejętności związane z programowaniem
               '''
       .obs;
   final s2 = '''Flutter/Dart 
-• To co widać w tym CV to wszystko mój kod, 
-  Wykożystałem w nim Getx, Dio, Pokazałem że 
-  rozumiem na czym polega animacja,
-  Do stworzenia połączenia  tel, wykożystałme 
-  Url_launcher i get_it. 
-  W symulacji sklepu, pokazałem że rozumiem 
-  Rest API które za pomocą pakitetów GetX oraz
-  Dio, przetworzyłem na listę  a dokładnie Grid
-  z produktami. 
-• Git i tym samym GitLab/GitHub.
-• Adobe PhotoShop.
-• Adobe Illustrator.
+• To co widać w tym CV to tylko część moich
+  umiejętności.
+• Layout - programuje swobodnie, umiem 
+  odtworzyć wygląd każdej aplikacji.  
+• Animacje - średnizaawansowany,   
+• W symulacji sklepu, pokazałem
+  że rozumiem Rest API, wykorzystując
+  GetX oraz http, przetworzyłem API na Grid z
+  produktami.
+• Firebase: Logowanie, integracja danych, zasady
+  bezpieczeństwa.
+• Znam koncepcje Bloc chodziaż wolę GetX.
+• Rozumiem Git i tym samym GitLab/GitHub.
+• Radze sobie z Adobe PhotoShop, Adobe 
+  Illustrator.
 • SolidWorks (czasami się przydaje od grafiki 3d).
-• Visual Studio.
-• Android Stutio.
+
+• Jako IDE używam Visual Studio i Android Stutio.
 
   '''
       .obs;

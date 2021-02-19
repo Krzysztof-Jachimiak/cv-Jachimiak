@@ -2,17 +2,15 @@ import 'dart:ui';
 
 import 'package:animation_routes_riverpod_divizion/controllers/strings_controllers.dart';
 import 'package:animation_routes_riverpod_divizion/share/adress_data.dart';
+import 'package:animation_routes_riverpod_divizion/share/cust_buttom.dart';
 import 'package:animation_routes_riverpod_divizion/share/logo_with_shadow.dart';
 import 'package:animation_routes_riverpod_divizion/services/services.dart';
-import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:animation_routes_riverpod_divizion/share/vertical_kj.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class Contacts extends StatefulWidget {
-  Contacts({Key key}) : super(key: key);
-
   @override
   _ContactsState createState() => _ContactsState();
 }
@@ -79,20 +77,11 @@ class _ContactsState extends State<Contacts> {
                                   return null;
                               },
                             ),
-                            Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.deepOrange,
-                                  borderRadius: BorderRadius.circular(10)),
-                              child: MaterialButton(
-                                onPressed: () =>
-                                    _callService.call(_controller.text),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child:
-                                      Text('Zatwierdź', style: styleHeadWhite),
-                                ),
-                              ),
-                            )
+                            CustButtom(
+                              onPres: () => _callService.call(_controller.text),
+                              text: 'Zatwierdź',
+                              color: Colors.deepOrange,
+                            ),
                           ],
                         ),
                       ),

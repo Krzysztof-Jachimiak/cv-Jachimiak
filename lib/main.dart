@@ -1,6 +1,6 @@
 import 'package:animation_routes_riverpod_divizion/controllers/product_controller.dart';
 import 'package:animation_routes_riverpod_divizion/controllers/strings_controllers.dart';
-import 'package:animation_routes_riverpod_divizion/screens/tab_bar.dart';
+import 'package:animation_routes_riverpod_divizion/screens/intro.dart';
 import 'package:animation_routes_riverpod_divizion/services/services.dart';
 
 import 'package:flutter/material.dart';
@@ -15,8 +15,8 @@ void main() {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: TabScreens(),
-        //body: Intro(),
+        // body: TabScreens(),
+        body: Intro(),
       ),
     ),
   );

@@ -27,13 +27,13 @@ class Curriculum extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width * 1,
                 child: Image.asset(
-                  'assets/ja.png',
+                  'assets/profilePicture.png',
                   colorBlendMode: BlendMode.colorDodge,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 340, 16, 0),
+              padding: const EdgeInsets.fromLTRB(16, 324, 16, 0),
               child: Container(height: 500, child: Cv()),
             ),
 
