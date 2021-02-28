@@ -7,7 +7,7 @@ class VerticalKJ extends StatelessWidget {
     return Container(
       width: MediaQuery.of(context).size.width * 0.2,
       decoration: BoxDecoration(
-          color: Colors.deepOrange,
+          color: AppColors.cardColor,
           borderRadius: BorderRadius.only(bottomRight: Radius.circular(48))),
       child: RotatedBox(
         quarterTurns: 3,
@@ -18,7 +18,7 @@ class VerticalKJ extends StatelessWidget {
             child: Text(
               'Krzysztof Jachimiak',
               style: styleHeadWhite,
-              textScaleFactor: 1.5,
+              textScaleFactor: 1.2,
             ),
           ),
         ),

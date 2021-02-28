@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:animation_routes_riverpod_divizion/screens/tab_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sequence_animation/flutter_sequence_animation.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Intro extends StatefulWidget {
@@ -23,39 +24,22 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
     sequenceAnimation = SequenceAnimationBuilder()
         .addAnimatable(
             animatable:
-                ColorTween(begin: Colors.transparent, end: Colors.red[20]),
-            from: Duration(seconds: 0),
-            to: Duration(seconds: 2),
-            tag: 'color1')
-        .addAnimatable(
-            animatable:
                 ColorTween(begin: Colors.transparent, end: Colors.white),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
             tag: 'color')
         .addAnimatable(
-            animatable: ColorTween(begin: Colors.purple, end: Colors.white),
-            from: Duration(seconds: 3),
-            to: Duration(seconds: 4),
-            tag: 'aria')
-        .addAnimatable(
-            animatable: Tween<double>(begin: 20, end: 100),
+            animatable: Tween<double>(begin: 120, end: 320),
             curve: (Curves.elasticOut),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
-            tag: 'width')
-        .addAnimatable(
-            animatable: Tween<double>(begin: 150, end: 330),
-            curve: (Curves.elasticOut),
-            from: Duration(seconds: 2),
-            to: Duration(seconds: 3),
-            tag: 'padding')
+            tag: 'margin')
         .addAnimatable(
             animatable: Tween<double>(begin: 135, end: 135),
             curve: (Curves.elasticOut),
             from: Duration(seconds: 2),
             to: Duration(seconds: 3),
-            tag: 'padding1')
+            tag: 'margin1')
         .addAnimatable(
             animatable:
                 ColorTween(begin: Colors.black, end: Colors.transparent),
@@ -78,17 +62,17 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: AnimatedBuilder(
+    return Container(
+      color: Colors.black,
+      child: AnimatedBuilder(
           animation: firstAnimController,
           builder: (BuildContext context, Widget child) {
             return Stack(
+              alignment: Alignment.topCenter,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    vertical: 100,
-                    horizontal: 110,
+                  padding: const EdgeInsets.only(
+                    top: 100,
                   ),
                   child: CircleAvatar(
                     backgroundColor: Colors.lightBlue[200],
@@ -99,23 +83,22 @@ class _IntroState extends State<Intro> with SingleTickerProviderStateMixin {
                   ),
                 ),
                 Container(
+                  height: MediaQuery.of(context).size.height * 1,
                   color: sequenceAnimation['circle'].value,
                 ),
                 Container(
-                  padding: EdgeInsets.symmetric(
-                      horizontal: sequenceAnimation['padding1'].value,
-                      vertical: sequenceAnimation['padding'].value),
+                  margin:
+                      EdgeInsets.only(top: sequenceAnimation['margin'].value),
                   child: AnimacjaCv(),
                 ),
                 Padding(
-                  padding: EdgeInsets.fromLTRB(10, 420, 0, 0),
-                  child: Container(
-                    child: Text(' Krzysztof Jachimiak',
-                        style: GoogleFonts.lato(
-                            color: sequenceAnimation['color'].value,
-                            fontSize: 40,
-                            fontWeight: FontWeight.w300)),
-                  ),
+                  padding: EdgeInsets.fromLTRB(
+                      0, MediaQuery.of(context).size.width * 1, 0, 0),
+                  child: Text(' Krzysztof Jachimiak',
+                      style: GoogleFonts.lato(
+                          color: sequenceAnimation['color'].value,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w300)),
                 ),
               ],
             );
@@ -162,22 +145,19 @@ class _AnimacjaCvState extends State<AnimacjaCv>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: AnimatedBuilder(
-        animation: animController,
-        builder: (context, child) {
-          return Transform.rotate(
-            angle: animation.value,
-            child: child,
-          );
-        },
-        child: Container(
-          padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
-          child: Text(
-            'C.V',
-            style: TextStyle(fontSize: 60, color: Colors.grey[300]),
-          ),
+    return AnimatedBuilder(
+      animation: animController,
+      builder: (context, child) {
+        return Transform.rotate(
+          angle: animation.value,
+          child: child,
+        );
+      },
+      child: Container(
+        padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+        child: Text(
+          'C.V',
+          style: TextStyle(fontSize: 60, color: Colors.grey[300]),
         ),
       ),
     );

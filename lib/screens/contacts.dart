@@ -5,6 +5,7 @@ import 'package:animation_routes_riverpod_divizion/share/adress_data.dart';
 import 'package:animation_routes_riverpod_divizion/share/cust_buttom.dart';
 import 'package:animation_routes_riverpod_divizion/share/logo_with_shadow.dart';
 import 'package:animation_routes_riverpod_divizion/services/services.dart';
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:animation_routes_riverpod_divizion/share/vertical_kj.dart';
 
 import 'package:flutter/material.dart';
@@ -33,18 +34,18 @@ class _ContactsState extends State<Contacts> {
       child: SingleChildScrollView(
         child: Form(
           child: Container(
-            height: MediaQuery.of(context).size.width * 1.7,
-            color: Colors.blueGrey[300],
+            height: MediaQuery.of(context).size.width * 1.5,
+            color: AppColors.backgroundFadedColor,
             child: Stack(
               children: [
                 Logo(
                   colorBlendMode: BlendMode.srcIn,
-                  color: Colors.grey[800],
+                  color: AppColors.cardColor,
                   width: MediaQuery.of(context).size.width,
                 ),
                 BackdropFilter(
                   filter: ImageFilter.blur(
-                      sigmaX: 5, sigmaY: 3, tileMode: TileMode.clamp),
+                      sigmaX: 2, sigmaY: 2, tileMode: TileMode.clamp),
                   child: Stack(
                     children: [
                       VerticalKJ(),
@@ -61,9 +62,11 @@ class _ContactsState extends State<Contacts> {
                               height: 25,
                             ),
                             TextFormField(
+                              style: TextStyle(color: Colors.white),
+                              cursorColor: AppColors.cardColor,
                               controller: _controller,
                               decoration: InputDecoration(
-                                  fillColor: Colors.white,
+                                  fillColor: AppColors.cardColor,
                                   border: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(15))),
                               keyboardType: TextInputType.number,
@@ -80,13 +83,13 @@ class _ContactsState extends State<Contacts> {
                             CustButtom(
                               onPres: () => _callService.call(_controller.text),
                               text: 'Zatwierdź',
-                              color: Colors.deepOrange,
+                              color: AppColors.accentColor,
                             ),
                           ],
                         ),
                       ),
                       Logo(
-                        colorBlendMode: BlendMode.clear,
+                        colorBlendMode: BlendMode.darken,
                         width: MediaQuery.of(context).size.width * 0.7,
                       ),
                     ],

@@ -9,6 +9,7 @@ class TileProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      color: AppColors.cardColor,
       elevation: 2,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -16,9 +17,12 @@ class TileProduct extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              height: 180,
+              height: MediaQuery.of(context).size.height * 0.18,
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(32),
+                color: Colors.white,
+              ),
               child: Image.network(
                 product.imageLink,
                 fit: BoxFit.fitHeight,
@@ -34,20 +38,20 @@ class TileProduct extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.15,
               decoration: BoxDecoration(
                   color: Colors.green[600],
-                  borderRadius: BorderRadius.circular(16)),
+                  borderRadius: BorderRadius.circular(32)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Text(product.rating.toString(), style: styleheading),
+                  Text(product.rating.toString(), style: styleHeadBlack),
                   Icon(
                     Icons.star,
                     size: 16,
-                    color: Colors.white,
+                    color: AppColors.cardColor,
                   )
                 ],
               ),
             ),
-            Text('\$${product.price}', style: styleHeadBlack),
+            Text('\$${product.price}', style: styleHeadWhite),
           ],
         ),
       ),

@@ -7,7 +7,7 @@ class Curriculum extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        decoration: BoxDecoration(color: Colors.blueGrey[300]),
+        decoration: BoxDecoration(color: AppColors.backgroundFadedColor),
         child: Stack(
           alignment: Alignment.topCenter,
           children: [
@@ -16,16 +16,18 @@ class Curriculum extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 24),
-                  child: Text('Curriculum Vitae', style: styleHeadBlack),
+                  child: Text('Curriculum Vitae', style: styleHeadWhite),
                 ),
-                Text('Krzysztof Jachimiak', style: styleHeadBlack),
+                Text('Krzysztof Jachimiak', style: styleHeadWhite),
               ],
             ),
 
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 60, 16, 0),
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.width * 0.16,
+              ),
               child: Container(
-                width: MediaQuery.of(context).size.width * 1,
+                width: MediaQuery.of(context).size.width * 0.64,
                 child: Image.asset(
                   'assets/profilePicture.png',
                   colorBlendMode: BlendMode.colorDodge,
@@ -33,8 +35,12 @@ class Curriculum extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(16, 324, 16, 0),
-              child: Container(height: 500, child: Cv()),
+              padding: EdgeInsets.only(
+                top: MediaQuery.of(context).size.width * 0.68,
+              ),
+              child: Container(
+                  height: MediaQuery.of(context).size.height * 0.50,
+                  child: Cv()),
             ),
 
             // Padding(

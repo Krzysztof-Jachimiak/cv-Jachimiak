@@ -52,13 +52,13 @@ class _CvState extends State<Cv> {
   Widget _buildTile(TheChapter rozdzial) {
     return Card(
       borderOnForeground: false,
-      elevation: 2,
-      color: Colors.deepOrange,
+      elevation: 0,
+      color: AppColors.cardColor,
       child: ListTile(
         onTap: () {
           Get.to(Details(chapter: rozdzial));
         },
-        contentPadding: EdgeInsets.all(10),
+        contentPadding: EdgeInsets.all(8),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -71,7 +71,7 @@ class _CvState extends State<Cv> {
         leading: ClipRRect(
           borderRadius: BorderRadius.circular(12.0),
           child: Container(
-            height: 80,
+            height: 48,
             child: Hero(
               tag: rozdzial.img,
               child: Image.asset(

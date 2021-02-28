@@ -1,3 +1,4 @@
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 
 class Heart extends StatefulWidget {
@@ -11,7 +12,7 @@ class _HeartState extends State<Heart> {
     return IconButton(
       icon: Icon(
         Icons.favorite,
-        color: Colors.grey[100],
+        color: AppColors.accentColor,
         size: 30,
       ),
       onPressed: () {},

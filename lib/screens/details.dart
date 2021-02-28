@@ -12,16 +12,16 @@ class Details extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: Colors.blueGrey[300],
+          backgroundColor: AppColors.backgroundFadedColor,
           appBar: AppBar(
-            backgroundColor: Colors.deepOrange,
+            backgroundColor: AppColors.cardColor,
             elevation: 0,
-            iconTheme: IconThemeData(color: Colors.white),
+            iconTheme: IconThemeData(color: AppColors.accentColor),
           ),
           body: SingleChildScrollView(
             child: Stack(children: [
               Container(
-                color: Colors.deepOrange,
+                color: AppColors.cardColor,
                 height: 280,
                 alignment: Alignment.topCenter,
               ),

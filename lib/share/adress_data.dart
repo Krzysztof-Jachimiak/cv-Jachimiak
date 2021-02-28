@@ -14,18 +14,22 @@ class AdresData extends StatelessWidget {
           padding: const EdgeInsets.only(left: 10.0),
           child: Column(
             children: [
-              Icon(Icons.home, color: Colors.white, size: 28),
-              Icon(Icons.phone, color: Colors.white, size: 28),
-              Icon(Icons.email, color: Colors.white, size: 28)
+              Icon(
+                Icons.home,
+                color: AppColors.accentColor,
+                size: 32,
+              ),
+              Icon(Icons.phone, color: AppColors.accentColor, size: 32),
+              Icon(Icons.email, color: AppColors.accentColor, size: 32)
             ],
           ),
         ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(_string.ul.toString(), style: styleHeadBlack),
-            Text(_string.tel.toString(), style: styleHeadBlack),
-            Text(_string.email.toString(), style: styleHeadBlack),
+            Text(_string.ul.toString(), style: styleHeadWhite),
+            Text(_string.tel.toString(), style: styleHeadWhite),
+            Text(_string.email.toString(), style: styleHeadWhite),
           ],
         ),
       ],

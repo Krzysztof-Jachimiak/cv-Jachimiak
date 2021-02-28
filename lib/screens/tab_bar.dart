@@ -1,4 +1,5 @@
 import 'package:animation_routes_riverpod_divizion/screens/curriculum.dart';
+import 'package:animation_routes_riverpod_divizion/share/style.dart';
 import 'package:flutter/material.dart';
 import 'rest_api_example.dart';
 import 'contacts.dart';
@@ -15,11 +16,14 @@ class TabScreens extends StatelessWidget {
         length: 3,
         initialIndex: 0,
         child: Scaffold(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: AppColors.backgroundFadedColor,
           body: TabBarView(
             children: pages,
           ),
           bottomNavigationBar: Container(
+            decoration: BoxDecoration(
+              color: AppColors.backgroundFadedColor,
+            ),
             child: TabBar(
               tabs: [
                 Tab(
@@ -35,7 +39,7 @@ class TabScreens extends StatelessWidget {
                   Icons.contact_phone_outlined,
                 )),
               ],
-              unselectedLabelColor: Colors.black,
+              unselectedLabelColor: AppColors.accentColor,
             ),
           ),
         ));

@@ -11,7 +11,7 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.blueGrey[300],
+        backgroundColor: AppColors.backgroundColor,
         body: Column(
           children: [
             Row(
@@ -19,17 +19,20 @@ class ProductPage extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(left: 16),
-                    child: Text('Maybelline', style: styleHeadBlack),
+                    child: Text('Maybelline', style: styleHeadWhite),
                   ),
                 ),
                 IconButton(
-                  icon: Icon(Icons.view_list_outlined),
+                  icon: Icon(
+                    Icons.view_list_outlined,
+                    color: AppColors.accentColor,
+                  ),
                   onPressed: () {
                     _productController.oneAxisLine();
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.grid_view),
+                  icon: Icon(Icons.grid_view, color: AppColors.accentColor),
                   onPressed: () {
                     _productController.twoAxisLine();
                     print(_productController.crossAxisCound1.value);
